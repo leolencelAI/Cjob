@@ -1,0 +1,482 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-langage" content="fr">
+    <title>Trouver votre nouvel emploi en moins de 2 minutes | Blockchain &amp; informatique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Trouvez votre nouvel emploi en ligne dans le domaine de la blockchain. CBjob vous aide dans la recherche de votre future emploi. Une offre 100% adaptée à vos désirs">
+    <link rel="stylesheet" href="pageAc/acceuilCB.css">
+    <!--on load JQ first--> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script rel="text/javascript" src="pageAc/accueilCB.js"></script>
+    <script rel="text/javascript" src="pageAc/accueilCBjq.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&amp;display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+  </head>
+  <body data-cjcrx="addYes" cz-shortcut-listen="true">
+    <div class="item_CB" id="item_CB" style="display: none;">
+      <i class="fas fa-angle-double-left" onclick="close_Menu()"></i>
+      <h5 class="h5_item" id="h5_item" onmouseover="print_tech()" onmouseout="erase_tech()">Tech     <i class="fas fa-caret-right"></i></h5>
+      <h5 class="h5_item" id="h5_item" onmouseover="print_cyb()" onmouseout="erase_cyb()">Cybersécurité     <i class="fas fa-caret-right"></i></h5>
+      <h5 class="h5_item" id="h5_item" onmouseover="print_data()" onmouseout="erase_data()">Data Sciences     <i class="fas fa-caret-right"></i></h5>
+      <h5 class="h5_item" id="h5_item" onmouseover="print_res()" onmouseout="erase_res()">Réseaux    <i class="fas fa-caret-right"></i></h5>
+      <h5 class="h5_item" id="h5_item" onmouseover="print_mar()" onmouseout="erase_mar()">Marketing     <i class="fas fa-caret-right"></i></h5>
+      <h5 class="h5_item" id="h5_item" onmouseover="print_sa()" onmouseout="erase_sa()">Vente     <i class="fas fa-caret-right"></i></h5>
+      <h5 class="h5_item" id="h5_item" onmouseover="print_jur()" onmouseout="erase_jur()">Juridique     <i class="fas fa-caret-right"></i></h5>
+      <h5 class="h5_item" id="h5_item" onmouseover="print_rh()" onmouseout="erase_rh()">RH     <i class="fas fa-caret-right"></i></h5>
+      <h5 class="h5_item" id="h5_item" onmouseover="print_au()" onmouseout="erase_au()">Autres   <i class="fas fa-caret-right"></i></h5>
+    </div>
+    <div class="div_tech" id="div_tech" onmouseover="print_tech()" onmouseout="erase_tech()">
+        <h6 class="div_tech-content"><a class="a_tech_content" href="">Développeur front-end</a></h6>
+        <h6 class="div_tech-content"><a class="a_tech_content" href="">Développeur back-end</a></h6>
+        <h6 class="div_tech-content"><a class="a_tech_content" href="">Développeur blockchain</a></h6>
+        <h6 class="div_tech-content"><a class="a_tech_content" href="">Ingénieur</a></h6>
+        <h6 class="div_tech-content"><a class="a_tech_content" href="">CTO</a></h6>
+        <h6 class="div_tech-content"><a class="a_tech_content" href="">Expert système informatique</a></h6>
+        <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+    <div class="div_cyb" id="div_cyb" onmouseover="print_cyb()" onmouseout="erase_cyb()">
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Pentester</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Cryptographe</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Administrateur Sécurité</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Architecte cybersécurité</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Auditeur cybersécurité</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+    <div class="div_data" id="div_data" onmouseover="print_data()" onmouseout="erase_data()">
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Data Analyst</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Data Analyst</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Ingénieur Big Data</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Machine Learning Engineer</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Architecte Big Data</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Chief Data Officer</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Data Protection Officer</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+    <div class="div_res" id="div_res" onmouseover="print_res()" onmouseout="erase_res()">
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Administrateur systèmes et réseaux</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Analyste réseaux</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Architecte réseau</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Ingénieur intégration</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Technicien réseaux</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+    <div class="div_mar" id="div_mar" onmouseover="print_mar()" onmouseout="erase_mar()">
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Community manager</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Rédacteur Web</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">SEO manager</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Chef de projet marketing</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Chef de produit</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Analyste marketing</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Affiliate manager</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+    <div class="div_sa" id="div_sa" onmouseover="print_sa()" onmouseout="erase_sa()">
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Sale manager</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Analyste vente</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Sale officer</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Gestionnaire retour client</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+    <div class="div_jur" id="div_jur" onmouseover="print_jur()" onmouseout="erase_jur()">
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Juriste entreprise</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Risk manager</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Avocat entreprise</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Spécialiste opérations fiscales</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">KYC analyst</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Expert comptable</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Compliance officer</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+    <div class="div_rh" id="div_rh" onmouseover="print_rh()" onmouseout="erase_rh()">
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">DRH</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">chargé de recrutement</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">responsable relations sociales</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">juriste social</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">consultant en recrutement</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">responsable paie</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">formateur</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">coach</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">auditeur social</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+    <div class="div_au" id="div_au" onmouseover="print_au()" onmouseout="erase_au()">
+      <h6 class="div_3-content" onmouseover="print_progr()" onmouseout="erase_progr()"><a class="a_tech_content" href="">Programmeur en    <i class="fas fa-caret-right"></i></a></h6>
+      <h6 class="div_3-content" onmouseover="print_st()" onmouseout="erase_st()"><a class="a_tech_content" href="">Stage    <i class="fas fa-caret-right"></i></a></h6>
+      <h6 class="div_3-content" onmouseover="print_pt()" onmouseout="erase_pt()"><a class="a_tech_content" href="">Partenariat    <i class="fas fa-caret-right"></i></a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Formuler ma demande</a></h6>
+    </div>
+    <div class="div_progr" id="div_progr" onmouseover="print_progr()" onmouseout="erase_progr()">
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Java/Js</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Python</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">C#</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">C/C++</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">CSS</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Swift/Objective-C</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Php/Ruby</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Solidity</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+    <div class="div_st" id="div_st" onmouseover="print_st()" onmouseout="erase_st()">
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Stage non qualifié</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Stage qualifié</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Stage longue durée</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Stage courte durée</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Stage international</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+    <div class="div_pt" id="div_pt" onmouseover="print_pt()" onmouseout="erase_pt()">
+      <h6 class="div_3-content"><a class="a_tech_content" href="">Inter-entreprise</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Contract publicitaire particulier-entreprise</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Sponsor</a></h6>
+      <h6 class="div_tech-content"><a class="a_tech_content" href="">Autres</a></h6>
+    </div>
+
+    <div class="pos-f-t">
+        <nav class="navbar">
+          <div class="div_barnav">
+            <div class="container_barnav">
+              <div class="barry" onclick="open_menu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+              <div class="div_logo">
+                <img src="logo.png" alt="logo" class="img_logo" height="40vh" width="40vw">
+                <h3 class="cate_Cb">Cjob<p class="cate_CB_para">  , Le meilleur de l'emploi à portée de main!</p></h3>
+              </div>
+            </div>
+            <div class="container_form">
+              <div class="search_bar">
+                <form action="" method="get" id="form-search_bar" class="searchMenu" autocomplete="off" role="search" style="background-color: rgb(102, 102, 112);">
+                  <input type="text" id="header-search-mobile" name="q" placeholder="Rechercher un service" style="background-color: rgb(102, 102, 112);">
+                  <input type="text" id="header-search-mobile2" name="b" placeholder="Rechercher un emploie" style="background-color: rgb(102, 102, 112);">
+                  <button type="submit" class="btn-reset btn-grey btn-search">
+                      <span class="svgContainer">
+                          <svg aria-hidden="true" focusable="false" viewBox="0 0 100 100" class="svg-icon svg-icon--headerSearch">
+                            <use xlink:href="#svg-headerSearch">
+                              <symbol viewBox="0 0 14 14" id="svg-headerSearch">
+                                <path d="M14 12.935l-4.284-4.225c.758-.933 1.083-1.996 1.083-3.293 0-2.992-2.417-5.416-5.399-5.416-2.981 0-5.399 2.425-5.399 5.416 0 2.991 2.418 5.416 5.399 5.416 1.3 0 2.286-.288 3.218-1.056l4.282 4.224 1.101-1.065zm-12.92-7.52c0-2.394 1.933-4.334 4.319-4.334 2.385 0 4.319 1.94 4.319 4.334.001 2.394-1.933 4.333-4.319 4.333-2.385 0-4.319-1.94-4.319-4.333z"></path>
+                              </symbol>
+                            </use>
+                          </svg>
+                      </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="log-sign_in">
+            <div class="btn-div_f">
+              <button class="btn-1" onclick="location.href='log-sign/log.html'">Log-in</button>
+            </div>
+            <div class="btn-div">
+              <button onclick="location.href='http://www.example.com'" class="login-btn font-awesome-icons">Sign-in</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    
+    <div class="navbar_second">
+      <div class="container_navbar_second">
+        <div class="container_bouton_secondnavbar">
+          <div class="cont_navbar3">
+            <h5 class="menu_find_service" onclick="open_menu()">Je cherche un service</h5>
+          </div>
+          <div class="cont_navbar4">
+            <h5 class="menu_find_emploi">Je cherche un emploi</h5>
+          </div>
+          <div class="cont_navbar">
+            <h5 class="menu_post_service">Poster un service</h5> 
+          </div>
+          <div class="cont_navbar2">
+            <h5 class="menu_post_emploi">Poster un emploi</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="display_row">
+      <div class="figure pos0">
+        <img src="img/figure/Sonia_transparent.png" alt="" class="figure_img">
+      </div>
+      <div class="figure pos1">
+        <img src="img/figure/Arnaud_transparent.png" alt="" class="figure_img">
+      </div>
+      <div class="figure pos2">
+        <img src="img/figure/Claire_transparent.png" alt="" class="figure_img">
+      </div>
+      <div class="figure pos3">
+        <img src="img/figure/Huang_transparent.png" alt="" class="figure_img">
+      </div>
+      <div class="figure pos4">
+        <img src="img/figure/Marie_transparent.png" alt="" class="figure_img">
+      </div>
+      <script>
+        var figureIndex = 0;
+        figure();
+        
+        function figure() {
+          var i;
+          var slides = document.getElementsByClassName("figure");
+          for (i = 0; i < slides.length; i++) {
+            $(slides[i]).fadeOut(2000);
+            //slides[i].style.opacity = "0"; 
+          }
+          figureIndex++;
+          if (figureIndex > slides.length) {figureIndex = 1} 
+          $(slides[figureIndex-1]).fadeIn(500);
+          //slides[figureIndex-1].style.opacity = "1"; 
+          setTimeout(figure, 8000); // Change image every 2 seconds
+        }
+      </script>
+      <img src="img/network_home.jpg" style="width:100vw; height: 100vh; opacity: 0.9;">
+      <div class="para_onpict">
+        <div class="div_button_main">
+          <button class="button_main token">CJ coin</button>
+          <button class="button_main blockchain">L'écosystème Cjob</button>
+          <button class="button_main plateforme">Découvrez la plateforme</button>
+        </div>
+      </div>
+    </div>
+    <div class="div_content">
+      <div class="center_content">
+        <div class="display_item">
+          <div class="first_item">
+            <div class="first_item_center">
+              <i class="fas fa-globe-americas fa-3x center colorfa"></i>
+              <h5 class="item">Trouvez les meilleurs développeurs blockchain dans le monde entier.</h5>
+            </div>
+          </div>
+          <div class="second_item">
+            <div class="second_item_center">
+              <i class="fas fa-cubes fa-3x center colorfa"></i>
+              <h5 class="item">Grâce aux smarts contracts, Cjob vous offre la meilleure expérience utilisateur possible!</h5>
+            </div>
+          </div>
+          <div class="last_item">
+            <div class="last_item_center">
+              <i class="fas fa-video fa-3x center colorfa"></i>
+              <h5 class="item">Communiquez avec votre interlocuteur grâce à la messagerie Cjob et la plateforme vidéo Cvideo.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="div_content">
+      <div class="center_content">
+        <div class="display_item">
+          <div class="div1-3">
+            <div class="first_item1">
+              <div class="first_item_center">
+                <i class="fas fa-3x center fa-user-lock colorfa"></i>
+                <h5 class="item">Vos données sont protégées et sécurisées. La transparence est notre priorité !</h5>
+              </div>
+            </div>
+            <div class="second_item2">
+              <div class="second_item_center">
+                <i class="fas fa-3x center fa-coins colorfa"></i>
+                <h5 class="item">Bénéficiez de la plateforme Cinvest. Levez des fonds auprès d'investisseurs internationaux !</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="display_row">
+      <div class="slideshow-container">
+        <div class="mySlides fade" style="display: none;">
+          <img src="img/startup_first.jpg" style="width:50vw; height: 60vh; opacity: 0.9;">
+        </div>
+        <div class="mySlides fade" style="display: block;">
+          <img src="img/coding_first.jpg" style="width:50vw; height: 60vh; opacity: 0.9;">
+        </div>
+        <div class="mySlides fade" style="display: none;">
+          <img src="img/team_firstpage.jpg" style="width:50vw; height: 60vh; opacity: 0.9;">
+        </div>
+      </div>
+    </div>
+    <script>
+      var slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; 
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1} 
+        slides[slideIndex-1].style.display = "block"; 
+        setTimeout(showSlides, 8000); // Change image every 2 seconds
+      }
+    </script>
+    <footer class="footer">
+      <div class="container_footer">
+        <div class="width_footer">
+          <div class="footer__lien_reseaux" id="footer__lien_reseaux">
+            <div class="link_footer_centre">
+              <h5 class="medias_title">Médias</h5>
+              <div class="container_div_link_footer">
+                <div class="container_link_icon">
+                  <i class="fab fa-github fa-lg" id="github"></i>
+                </div>
+                <a href="" class="footer__lien footer__lien0">github</a>
+              </div>
+              <div class="container_div_link_footer">
+                <div class="container_link_icon">
+                  <i class="fab fa-facebook fa-lg" id="facebook"></i>
+                </div>
+                <a href="" class="footer__lien footer__lien1">facebook</a>
+              </div>
+              <div class="container_div_link_footer">
+                <div class="container_link_icon">
+                  <i class="fab fa-twitter-square fa-lg" id="twitter"></i>
+                </div>
+                <a href="" class="footer__lien footer__lien2">twitter</a>
+              </div>
+              <div class="container_div_link_footer">
+                <div class="container_link_icon">
+                  <i class="fab fa-telegram fa-lg" id="telegram"></i>
+                </div>
+                <a href="" class="footer__lien footer__lien3">telegram</a>
+              </div>
+              <div class="container_div_link_footer">
+                <div class="container_link_icon">
+                  <i class="fab fa-instagram-square fa-lg" id="instagram"></i>
+                </div>
+                <a href="" class="footer__lien footer__lien4">instagram</a>
+              </div>
+              <div class="container_div_link_footer">
+                <div class="container_link_icon">
+                  <i class="fab fa-medium fa-lg" id="medium"></i>
+                </div>
+                <a href="" class="footer__lien footer__lien5">medium</a>
+              </div>
+            </div>
+          </div>
+          <div class="copyright_termuse_div">
+            <div class="copyright_container">
+              <h5 class="copyright_title">Termes</h5>
+              <a href="" class="link_copyright_termuse">Conditions d'utilisation</a>
+              <a href="" class="link_copyright_termuse">Politique de confidentialité</a>
+              <a href="" class="link_copyright_termuse">Politique de copyright</a>
+              <a href="" class="link_copyright_termuse">Code de conduite</a>
+              <a href="" class="link_copyright_termuse">Frais et charges</a>
+            </div>
+          </div>
+          <div class="copyright_termuse_div">
+            <div class="copyright_container">
+              <h5 class="copyright_title">À propos</h5>
+              <a href="" class="link_copyright_termuse">White paper</a>
+              <a href="" class="link_copyright_termuse">Notre équipe</a>
+              <a href="" class="link_copyright_termuse">Nos partenaires</a>
+              <a href="" class="link_copyright_termuse">Roadmap</a>
+              <a href="" class="link_copyright_termuse">Investisseurs</a>
+              <a href="" class="link_copyright_termuse">Actualités</a>
+            </div>
+          </div>
+          <div class="copyright_termuse_div">
+            <div class="copyright_container">
+              <h5 class="copyright_title">Communauté</h5>
+              <a href="" class="link_copyright_termuse">Forum</a>
+              <a href="" class="link_copyright_termuse">Podcast</a>
+              <a href="" class="link_copyright_termuse">Blog</a>
+              <a href="" class="link_copyright_termuse">Affiliation</a>
+              <a href="" class="link_copyright_termuse">Support client</a>
+            </div>
+          </div>
+          <div class="copyright_termuse_div">
+            <div class="copyright_container">
+              <h5 class="copyright_title">Start now!</h5>
+              <a href="" class="link_copyright_termuse">Rechercher un emploie</a>
+              <a href="" class="link_copyright_termuse">Rechercher un service</a>
+              <a href="" class="link_copyright_termuse">Poster un emploie</a>
+              <a href="" class="link_copyright_termuse">Poster un service</a>
+              <a href="" class="link_copyright_termuse">Stage en entreprise</a>
+              <a href="" class="link_copyright_termuse">Je cherche un partenariat</a>
+              <a href="" class="link_copyright_termuse">Je cherche un(e) associé(e)</a>
+              <a href="" class="link_copyright_termuse">Launchpad entreprise</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_carte_logo">
+        <div class="footer_carte_logo_center">
+          <div class="logo_paiement">
+            <div class="logo_paiement_margin">
+              <div class="img_paiement">
+                <img loading="lazy" src="svg/visa.svg" alt="" class="img_paie" id="visa">
+                <img loading="lazy" src="svg/mastercard.svg" alt="" class="img_paie" id="mastercard">
+                <img loading="lazy" src="svg/maestro.svg" alt="" class="img_paie" id="maestro">
+                <img loading="lazy" src="svg/american_express.svg" alt="" class="img_paie" id="AM">
+                <img loading="lazy" src="svg/paypal.svg" alt="" class="img_paie" id="paypal">
+              </div>
+              <p class="secure_paie_p">Paiements sécurisés<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="1em" height="1em" class="secure_paie"><path d="M16.27 10.5V8.07C16.27 5.82 14.45 4 12.2 4S8.13 5.82 8.13 8.07v2.43H6v8.94h12.43V10.5h-2.16zm-3.07 6.46h-2v-4h2v4zm1.07-6.46h-4.14V8.07c0-1.14.93-2.07 2.07-2.07 1.14 0 2.07.93 2.07 2.07v2.43z" fill="currentColor"></path></svg></p>
+            </div>
+          </div>
+          <div class="logo_footer">
+            <div class="logo_footer_margin">
+              <img src="logo.png" id="logo_footer_c" class="img_logo" height="70vh" width="70vw">
+            </div>
+          </div>
+          <div class="footer__adresse">
+            <div class="footer_adresse_margin">
+              <p class="head_off">Siège social Cjob
+              </p><address class="adress_footer">
+                  17 Boulevard Montparnasse<br>
+                          Paris, 75006
+              </address>
+              <svg class="svg_flag" aria-hidden="true" focusable="false" width="21" height="15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                  <rect id="rect-footerFlag" x="0" y="0" width="21" height="15" rx="1"></rect>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <mask id="mask-footerFlag" fill="#fff">
+                    <use xlink:href="#rect-footerFlag"></use>
+                  </mask>
+                  <use fill="#FFF" xlink:href="#rect-footerFlag"></use>
+                  <path fill="#082BCB" mask="url(#mask-footerFlag)" d="M0 0h7v15H0z"></path>
+                  <path fill="#8A0D1E" mask="url(#mask-footerFlag)" d="M14 0h7v15h-7z"></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_copyright">
+        <div class="footer_copyright_flex">
+          <div class="footer_copyright_user">
+            <p class="link_copyright1">X</p>
+            <p class="link_copyright">Utilisateurs enregistrés</p>
+          </div>
+          <div class="footer_copyright_services">
+            <p class="link_copyright1">X</p>
+            <p class="link_copyright">Micro-services réalisés</p>
+          </div>
+          <div class="footer_copyright_jobs">
+            <p class="link_copyright1">X</p>
+            <p class="link_copyright">Emplois délivrés</p>
+          </div>
+          <div class="footer_copyright_amount">
+            <p class="link_copyright1">X €</p>
+            <p class="link_copyright">Échangés</p>
+          </div>
+          <div class="footer_copyright_center">
+            <p class="link_copyright1">Cjob™ is a registered Trademark</p>
+            <p class="link_copyright">Copyright © 2021 Cjob </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
